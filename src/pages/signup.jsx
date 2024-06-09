@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Button } from '@chakra-ui/react'
+import { Button, Center } from '@chakra-ui/react'
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -35,20 +35,20 @@ const SignUp = () => {
             <h2 className="font-bold text-xl text-[#3A404B]">
               Create your account
             </h2>
-            <p className="text-md">
+            <p className="text-md text-[#525a6a]">
               You're one step closer to providing exceptional Customer Services
             </p>
           </div>
 
           <div className="flex flex-col gap-3">
-            <label htmlFor="email" className="text-[#3A404B]">
+            <label htmlFor="email" className="text-[#525a6a] font-semibold">
               Work Email
             </label>
             <Field
               name="email"
               type="email"
               placeholder="Enter your work email"
-              className="border border-[#3A404B] rounded p-2 outline-none"
+              className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba]"
             />
             <ErrorMessage name="email" >
                 {message => <div className="text-red-500">{message}</div>}
@@ -63,9 +63,9 @@ const SignUp = () => {
               name="password"
               type="text"
               placeholder="Enter your password"
-              className="border border-[#3A404B] rounded p-2 outline-none"
+              className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba]"
             />
-            <small>8 characters minimum, 1 uppercase letter and 1 Number</small>
+            <small className="text-[#afb3ba]">8 characters minimum, 1 uppercase letter and 1 Number</small>
             <ErrorMessage name="password" >
                 {message => <div className="text-red-500">{message}</div>}
             </ErrorMessage>
@@ -76,6 +76,8 @@ const SignUp = () => {
           <h2 className="text-center my-4">OR</h2>
 
           <Button leftIcon={<FcGoogle/>} colorScheme="blue" variant="outline" size="lg">Sign Up with Google</Button>
+
+          <Center><p className="text-sm">Already have an account? Login</p></Center>
 
           {/* <button type="submit">Next</button>#007BFF */}
         </Form>

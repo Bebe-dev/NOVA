@@ -26,7 +26,7 @@ const EmailVerification = () => {
 
   const TimerButton = () => {
     return (
-      <Button type="text" colorScheme="blue" size="lg" className="mt-3">
+      <Button colorScheme="blue" size="lg" className="mt-3">
         Resend
       </Button>
     );
@@ -38,7 +38,7 @@ const EmailVerification = () => {
       return <TimerButton />;
     } else {
       // Render a countdown
-      return <span>Resend code in {seconds}</span>;
+      return <span>{seconds}s</span>;
     }
   };
 
@@ -69,7 +69,7 @@ const EmailVerification = () => {
                 Email verification
               </h2>
               <p className="text-md">
-                Customize your getting started experience to fulfil your needs
+                Customize your workflow and integrations
               </p>
               <Center>
                 <img src=".\public\images\postal letter.png" className="m-12" />

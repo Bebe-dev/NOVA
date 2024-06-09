@@ -38,7 +38,7 @@ const SetUp = () => {
                 Complete account setup
               </h2>
               <p className="text-md">
-                Customize your getting started experience to fulfill your needs
+                Customize your workflow and integrations
               </p>
             </div>
 
@@ -79,9 +79,18 @@ const SetUp = () => {
               <Field
                 name="industry"
                 type="text"
-                placeholder="Enter Industry"
+                as="select"
+                placeholder="Select industry"
                 className="border border-[#3A404B] rounded p-2 outline-none"
-              />
+              >
+                <option className="text-sm" disabled value="">Enter industry</option>
+                <option value="Sales and Business">Sales and Business</option>
+                <option value="big">Customer Support</option>
+                <option value="finance">Finance and legal</option>
+                <option value="project">Project Management</option>
+                <option value="marketing">Marketing and design</option>
+                <option value="others">Others</option>
+              </Field>
               <ErrorMessage name="industry">
                 {(message) => <div className="text-red-500">{message}</div>}
               </ErrorMessage>
@@ -98,9 +107,13 @@ const SetUp = () => {
                 placeholder="Select Company Size"
                 className="border border-[#3A404B] rounded p-2 outline-none"
               >
-                <option value=""></option>
-                <option value="small">small</option>
-                <option value="big">big</option>
+                <option value="" disabled>Select Company Size</option>
+                <option value="small">1-10</option>
+                <option value="big">11-20</option>
+                <option value="21">21-30</option>
+                <option value="31">31-50</option>
+                <option value="51">51-100</option>
+                <option value="101">101 - above</option>
               </Field>
               <ErrorMessage name="companySize">
                 {(message) => <div className="text-red-500">{message}</div>}

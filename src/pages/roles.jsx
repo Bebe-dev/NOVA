@@ -1,4 +1,4 @@
-import { Button, Center } from "@chakra-ui/react";
+import { Button, Center, Input } from "@chakra-ui/react";
 import { PiHandWavingFill } from "react-icons/pi";
 
 const Roles = () => {
@@ -18,44 +18,53 @@ const Roles = () => {
 
       <div className="flex flex-col justify-center items-center">
         <div className="flex gap-8 mt-10">
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Product Manager
           </Button>
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Marketing Officer
           </Button>
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Director of Operations
           </Button>
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Accountant
           </Button>
         </div>
         <div className="flex gap-8 mt-10">
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Sales Manager
           </Button>
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Content Strategies
           </Button>
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Technical Specialist
           </Button>
         </div>
         <div className="flex gap-8 my-10">
-          <Button colorScheme="blue" size="lg" variant="outline">
+          <Button size="lg" variant="outline" borderColor="#c9ccd1" textColor="#3a404b">
             Customer Service Manager
           </Button>
-          <Button colorScheme="blue" size="lg" variant="outline">
+          {/* <Button colorScheme="blue" size="lg" variant="outline">
             Others
-          </Button>
+          </Button> */}
+          <Input htmlSize={4} width='auto' placeholder="Others" borderColor="#c9ccd1" textColor="#3a404b"  _placeholder={{color: '#3a404b' }} className="p-6" />
         </div>
+
+        <Button colorScheme="blue" size="lg" className="mt-3">
+          Done
+        </Button>
       </div>
 
-      <Center className="my-8 flex flex-col gap-8">
-        <img src=".\public\images\LOGO.png" />
-        <img src=".\public\images\Slider.png"/>
-      </Center>
+      <div className="flex justify-center items-end gap-14">
+        <Center className="mt-8 flex flex-col gap-8">
+          <img src=".\public\images\LOGO.png" />
+          <img src=".\public\images\Slider.png" />
+        </Center>
+
+        
+      </div>
     </div>
   );
 };
