@@ -43,20 +43,20 @@ const SignUp = () => {
         <Form className="flex flex-col gap-4 mt-16 w-full md:w-1/2">
           <div className="">
             <h2 className="font-bold text-xl text-[#3A404B]">Create your account</h2>
-            <p className="text-md">
+            <p className="text-md text-[#525a6a]">
               You're one step closer to providing exceptional Customer Services
             </p>
           </div>
 
           <div className="flex flex-col gap-3">
-            <label htmlFor="email" className="text-[#3A404B]">
+            <label htmlFor="email" className="text-[#525a6a] font-semibold">
               Work Email
             </label>
             <Field
               name="email"
               type="email"
               placeholder="Enter your work email"
-              className="border border-[#3A404B] rounded p-2 outline-none"
+              className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba]"
             />
             <ErrorMessage name="email">
               {(message) => <div className="text-red-500">{message}</div>}
@@ -71,11 +71,11 @@ const SignUp = () => {
               name="password"
               type="password"
               placeholder="Enter your password"
-              className="border border-[#3A404B] rounded p-2 outline-none"
+              className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba]"
             />
-            <small>8 characters minimum, 1 uppercase letter and 1 Number</small>
-            <ErrorMessage name="password">
-              {(message) => <div className="text-red-500">{message}</div>}
+            <small className="text-[#afb3ba]">8 characters minimum, 1 uppercase letter and 1 Number</small>
+            <ErrorMessage name="password" >
+                {message => <div className="text-red-500">{message}</div>}
             </ErrorMessage>
           </div>
 
