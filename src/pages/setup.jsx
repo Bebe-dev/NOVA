@@ -126,7 +126,6 @@ const SetUp = () => {
               Start Free Trial
             </Button>
 
-            {/* <button type="submit">Next</button>#007BFF */}
           </Form>
         </Formik>
       </div>

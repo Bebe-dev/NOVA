@@ -99,21 +99,6 @@ const SignUp = () => {
               {show? <IoEyeSharp />: <HiMiniEyeSlash /> }
             </Button>
 
-            {/* <InputGroup size="md">
-              <Input
-                name="password"
-                pr="4.5rem"
-                type={show ? "text" : "password"}
-                placeholder="Enter your password"
-                className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba]"
-              />
-              <InputRightElement width="4.5rem">
-                <Button h="1.75rem" size="sm" onClick={handleClick}>
-                  {show ? "Hide" : "Show"}
-                </Button>
-              </InputRightElement>
-            </InputGroup> */}
-
             <small className="text-[#afb3ba]">
               8 characters minimum, 1 uppercase letter and 1 Number
             </small>
