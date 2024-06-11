@@ -1,8 +1,10 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
+import { HiMiniEyeSlash } from "react-icons/hi2";
+import { IoEyeSharp } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 
@@ -19,11 +21,15 @@ const SignUp = () => {
     navigate("/signup");
   };
 
- // const passwordInput = () => {
-    const [show, setShow] = React.useState(false);
-    const handleClick = () => setShow(!show);
-  //};
-  //passwordInput()
+  const [show, setShow] = React.useState(false);
+
+  const passwordView = () => {
+    setShow(!show)
+    if(show){
+
+    }
+
+  }
 
   return (
     <div className="flex flex-col md:flex-row gap-12 p-4 md:p-12">
@@ -85,10 +91,13 @@ const SignUp = () => {
             </label>
             <Field
               name="password"
-              type="password"
+              type={show? "text": "password"}
               placeholder="Enter your password"
-              className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba]"
+              className="border border-[#3A404B] rounded p-2 outline-none placeholder-[#afb3ba] relative"
             />
+            <Button size="md" width="50px" backgroundColor="#ffffff" onClick={passwordView} position="absolute" top={310} right={150}>
+              {show? <IoEyeSharp />: <HiMiniEyeSlash /> }
+            </Button>
 
             {/* <InputGroup size="md">
               <Input

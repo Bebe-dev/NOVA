@@ -6,6 +6,8 @@ import SetUp from './pages/setup'
 import EmailVerification from './pages/emailVerification'
 import Roles from './pages/roles'
 import Login from './pages/login'
+import Dashboard from './pages/dashboard'
+
 import LandingPage from './pages/landingPage'
 
 
@@ -20,7 +22,7 @@ function App() {
           <Route path='/setup' element={<SetUp />} />
           <Route path='/emailverification' element={<EmailVerification />} />
           <Route path='/roles' element={<Roles />} />
-          <Route path='/landingpage' element={<LandingPage />} />
+          <Route path='/dashboard' element={<Dashboard/>} />
               
 
    
