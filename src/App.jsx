@@ -22,6 +22,7 @@ function App() {
           <Route path='/setup' element={<SetUp />} />
           <Route path='/emailverification' element={<EmailVerification />} />
           <Route path='/roles' element={<Roles />} />
+          <Route path='/landingpage' element={<LandingPage />} />
           <Route path='/dashboard' element={<Dashboard/>} />
               
 
