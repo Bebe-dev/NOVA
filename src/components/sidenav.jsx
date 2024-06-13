@@ -74,7 +74,9 @@ const SideNav = () => {
   return (
     <div className="flex flex-col h-screen justify-between bg-[#EFF7FF]">
       <div>
-        <img src=".\public\images\LOGO.png" className="ml-6 mb-12" />
+        <img src=".\public\images\LOGO.png" className="ml-6 mb-8" />
+
+        <p className="pl-24">Admin</p>
 
         <div className="flex flex-col">
           {Menus.map((menu, index) => {
