@@ -7,6 +7,12 @@ import EmailVerification from './pages/emailVerification'
 import Roles from './pages/roles'
 import Login from './pages/login'
 import Dashboard from './pages/dashboard'
+import Overview from './pages/overview'
+import TeamPerformance from './pages/teamPerformance'
+import Assigned from './pages/assigned'
+import Unassigned from './pages/unassigned'
+import Teams from './pages/teams'
+import Discussion from './pages/discussion'
 
 import LandingPage from './pages/landingPage'
 
@@ -22,11 +28,15 @@ function App() {
           <Route path='/setup' element={<SetUp />} />
           <Route path='/emailverification' element={<EmailVerification />} />
           <Route path='/roles' element={<Roles />} />
-          <Route path='/landingpage' element={<LandingPage />} />
-          <Route path='/dashboard' element={<Dashboard/>} />
-              
-
-   
+          <Route path='/landingpage' element={<LandingPage />} /> 
+          <Route path='/ticket' element={<Dashboard/>} />
+          <Route path='/overview' element={<Overview/>} />
+          <Route path='/teamPerformance' element={<TeamPerformance/>} />
+          <Route path='/assigned' element={<Assigned/>} />
+          <Route path='/unassigned' element={<Unassigned/>} />
+          <Route path='/teams' element={<Teams/>} />
+          <Route path='/discussion' element={<Discussion/>} />
+          
         </Routes>
       </BrowserRouter>
   
