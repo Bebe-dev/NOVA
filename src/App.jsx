@@ -13,8 +13,9 @@ import Assigned from './pages/assigned'
 import Unassigned from './pages/unassigned'
 import Teams from './pages/teams'
 import Discussion from './pages/discussion'
+import Landing from './pages/landing/landing'
 
-//import LandingPage from './pages/landingPage'
+
 
 
 
@@ -28,7 +29,7 @@ function App() {
           <Route path='/setup' element={<SetUp />} />
           <Route path='/emailverification' element={<EmailVerification />} />
           <Route path='/roles' element={<Roles />} />
-          {/* <Route path='/landingpage' element={<LandingPage />} />  */}
+          <Route path='/' element={<Landing />} />  
           <Route path='/ticket' element={<Dashboard/>} />
           <Route path='/overview' element={<Overview/>} />
           <Route path='/teamPerformance' element={<TeamPerformance/>} />
