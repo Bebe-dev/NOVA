@@ -14,6 +14,7 @@ import Unassigned from './pages/unassigned'
 import Teams from './pages/teams'
 import Discussion from './pages/discussion'
 import Landing from './pages/landing/landing'
+import DemoPage from './pages/demo'
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/unassigned' element={<Unassigned/>} />
           <Route path='/teams' element={<Teams/>} />
           <Route path='/discussion' element={<Discussion/>} />
+          <Route path='/demo' element={<DemoPage/>} />
           
         </Routes>
       </BrowserRouter>

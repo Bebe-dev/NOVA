@@ -26,6 +26,7 @@ import {
 } from "@chakra-ui/react";
 import { PiSparkle } from "react-icons/pi";
 import { FaCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const useIntersectionObserver = (elementRef, callback, options) => {
   useEffect(() => {
@@ -51,6 +52,9 @@ const useIntersectionObserver = (elementRef, callback, options) => {
 };
 
 const HeroSection = () => {
+
+  const navigate = useNavigate()
+
   useEffect(() => {
     const customerText = document.getElementById("customer");
     const backgroundSvg = document.getElementById("background-svg");
@@ -78,10 +82,10 @@ const HeroSection = () => {
             support processes.
           </p>
           <div className="cta-buttons flex justify-center md:justify-start space-x-4">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded transition hover:bg-blue-700">
+            <button className="bg-blue-600 text-white px-6 py-3 rounded transition hover:bg-blue-700" onClick={()=> navigate("/signup")}>
               Sign Up for Free
             </button>
-            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded transition hover:bg-gray-100">
+            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded transition hover:bg-gray-100" onClick={()=> navigate("/demo")}>
               Request Demo
             </button>
           </div>
@@ -125,6 +129,8 @@ const HeroSection = () => {
 const FeaturesSection = () => {
   const imageRef = useRef(null);
   const textRef = useRef(null);
+
+  const navigate = useNavigate()
 
   useIntersectionObserver(
     imageRef,
@@ -176,10 +182,10 @@ const FeaturesSection = () => {
             your productivity at work and manage your project easily.
           </p>
           <div className="cta-buttons flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded transition hover:bg-blue-700">
+            <button className="bg-blue-600 text-white px-6 py-3 rounded transition hover:bg-blue-700" onClick={()=> navigate("/signup")}>
               Sign Up for Free
             </button>
-            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded transition hover:bg-gray-100">
+            <button className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded transition hover:bg-gray-100" onClick={()=> navigate("/demo")}>
               Request Demo
             </button>
           </div>
@@ -304,6 +310,9 @@ const UnifiedAndMultichannelSection = () => {
 };
 
 const Landing = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="landing-page">
       <header className="flex justify-between items-center w-full p-5 bg-white shadow-md">
@@ -393,10 +402,10 @@ const Landing = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-10">
-          <Button textColor="#0056B3" leftIcon={<PiSparkle />}>
+          <Button textColor="#0056B3" leftIcon={<PiSparkle />} onClick={()=> navigate("/signup")}>
             Sign up for free
           </Button>
-          <Button variant="outline" textColor="white">
+          <Button variant="outline" textColor="white" onClick={()=> navigate("/demo")}>
             Request Demo
           </Button>
         </div>
@@ -489,7 +498,7 @@ const Landing = () => {
               </div>
             </CardBody>
             <CardFooter>
-              <Button colorScheme="blue" w="100%">
+              <Button colorScheme="blue" w="100%" onClick={()=> navigate("/signup")}>
                 Start Free Trial
               </Button>
             </CardFooter>
@@ -545,7 +554,7 @@ const Landing = () => {
               </div>
             </CardBody>
             <CardFooter>
-              <Button colorScheme="blue" w="100%">
+              <Button colorScheme="blue" w="100%" onClick={()=> navigate("/signup")}>
                 Start Free Trial
               </Button>
             </CardFooter>
@@ -604,7 +613,7 @@ const Landing = () => {
               </div>
             </CardBody>
             <CardFooter>
-              <Button colorScheme="blue" w="100%">
+              <Button colorScheme="blue" w="100%" onClick={()=> navigate("/demo")}>
                 Request Demo
               </Button>
             </CardFooter>
@@ -662,7 +671,7 @@ const Landing = () => {
               </div>
             </CardBody>
             <CardFooter>
-              <Button colorScheme="blue" w="100%">
+              <Button colorScheme="blue" w="100%" onClick={()=> navigate("/demo")}>
                 Request Demo
               </Button>
             </CardFooter>
@@ -775,6 +784,7 @@ const Landing = () => {
             textColor="#ffffff"
             backgroundColor="#007BFF"
             leftIcon={<PiSparkle />}
+            onClick={()=> navigate("/signup")}
           >
             Sign up for free
           </Button>
@@ -782,6 +792,7 @@ const Landing = () => {
             border="1px #007bff solid"
             variant="outline"
             textColor="#007BFF"
+            onClick={()=> navigate("/demo")}
           >
             Request Demo
           </Button>
